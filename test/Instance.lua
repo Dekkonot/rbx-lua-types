@@ -3,8 +3,8 @@ package.path = "../?/init.lua;../src/?.lua;../src/?/init.lua;"..package.path
 local Util = require("util")
 local DOM = require("src")
 
-local inst0 = DOM.Instance("foo")
-local inst1 = DOM.Instance("bar")
+local inst0 = DOM.Instance.new("foo")
+local inst1 = DOM.Instance.new("bar")
 
 assert(inst0.Ref == 0, "inst0 ref was not 0")
 assert(inst1.Ref == 1, "inst1 ref was not 1")
@@ -38,7 +38,7 @@ assert(pcall(function() inst1.Properties.foo = true end), "property table for in
 assert(inst0.Properties.foo == true, "writing property of inst0 did not set it")
 assert(inst1.Properties.foo == true, "writing property of inst1 did not set it")
 
-local inst52 = DOM.Instance("baz", 52)
+local inst52 = DOM.Instance.new("baz", 52)
 
 assert(inst52.Ref == 52, "second argument of Instance constructor failed to set Ref")
 

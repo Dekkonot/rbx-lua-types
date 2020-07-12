@@ -13,10 +13,10 @@ local members = {}
 mt.__index = members
 
 --- Creates a new `Vector3` out of the arguments.
-local function constructor(x, y, z)
-    assert(type(x) == "number", "arg #1 to Vector3 constructor must be a number")
-    assert(type(y) == "number", "arg #2 to Vector3 constructor must be a number")
-    assert(type(z) == "number", "arg #3 to Vector3 constructor must be a number")
+local function new(x, y, z)
+    assert(type(x) == "number", "arg #1 to Vector3.new must be a number")
+    assert(type(y) == "number", "arg #2 to Vector3.new must be a number")
+    assert(type(z) == "number", "arg #3 to Vector3.new must be a number")
 
     local self = {}
 
@@ -29,4 +29,6 @@ local function constructor(x, y, z)
     return self
 end
 
-return constructor
+return {
+    new = new,
+}

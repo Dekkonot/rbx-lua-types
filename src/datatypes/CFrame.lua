@@ -22,17 +22,19 @@ local members = {}
 mt.__index = members
 
 --- Creates a new `CFrame` out of the arguments.
-local function constructor(x, y, z, rX, rY, rZ, uX, uY, uZ, lX, lY, lZ)
+local function new(x, y, z, rX, rY, rZ, uX, uY, uZ, lX, lY, lZ)
     local self = {}
 
-    self.Position = Vector3(x, y, z)
-    self.RightVector = Vector3(rX, rY, rZ)
-    self.UpVector = Vector3(uX, uY, uZ)
-    self.LookVector = Vector3(lX, lY, lZ)
+    self.Position = Vector3.new(x, y, z)
+    self.RightVector = Vector3.new(rX, rY, rZ)
+    self.UpVector = Vector3.new(uX, uY, uZ)
+    self.LookVector = Vector3.new(lX, lY, lZ)
 
     setmetatable(self, mt)
 
     return self
 end
 
-return constructor
+return {
+    new = new,
+}

@@ -93,7 +93,7 @@ local nullClass = setmetatable({
 nullClass.Parent = nullClass
 
 --- Takes a ClassName and returns a new Instance of that class.
-local function constructor(class, ref)
+local function new(class, ref)
     assert(type(class) == "string", "arg #1 to Instance constructor should be a string")
 
     local self = {}
@@ -113,4 +113,6 @@ local function constructor(class, ref)
     return self
 end
 
-return constructor
+return {
+    new = new,
+}

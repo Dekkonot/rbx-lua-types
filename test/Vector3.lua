@@ -3,9 +3,9 @@ package.path = "../?/init.lua;../src/?.lua;../src/?/init.lua;"..package.path
 local Util = require("util")
 local DOM = require("src")
 
-local vec0 = DOM.Vector3(1, 2, 3)
-local vec1 = DOM.Vector3(4, 5, 6)
-local vec2 = DOM.Vector3(1, 2, 3)
+local vec0 = DOM.Vector3.new(1, 2, 3)
+local vec1 = DOM.Vector3.new(4, 5, 6)
+local vec2 = DOM.Vector3.new(1, 2, 3)
 
 assert(vec0 == vec0, "vec0 was not equal to itself")
 assert(vec0 ~= vec1, "vec0 was equal to vec1")
