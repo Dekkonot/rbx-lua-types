@@ -22,5 +22,5 @@ local WEAK_VALUE_MT = { __mode = "v" }
 return {
     typeof = typeof,
     READ_ONLY_MT = READ_ONLY_MT,
-    WEAK_VALUE_MT = WEAK_VALUE_MT
+    WEAK_VALUE_MT = WEAK_VALUE_MT,
 }
