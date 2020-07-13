@@ -19,3 +19,4 @@ The following Roblox data types are included in this project:
 - Rect
 - UDim
 - UDim2
+- NumberRange

@@ -13,4 +13,5 @@ return {
     Rect = require("datatypes.Rect"),
     UDim = require("datatypes.UDim"),
     UDim2 = require("datatypes.UDim2"),
+    NumberRange = require("datatypes.NumberRange"),
 }

@@ -13,5 +13,6 @@ lua5.2 Region3.lua
 lua5.2 Rect.lua
 lua5.2 UDim.lua
 lua5.2 UDim2.lua
+lua5.2 NumberRange.lua
 
 echo Finished running tests!
