@@ -7,5 +7,6 @@ return {
     Vector2 = require("datatypes.Vector2"),
     CFrame = require("datatypes.CFrame"),
     Color3 = require("datatypes.Color3"),
-    BrickColor = require("datatypes.BrickColor")
+    BrickColor = require("datatypes.BrickColor"),
+    Ray = require("datatypes.Ray"),
 }

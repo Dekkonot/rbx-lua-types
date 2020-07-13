@@ -14,3 +14,4 @@ The following Roblox data types are included in this project:
 - CFrame
 - Color3
 - BrickColor
+- Ray
