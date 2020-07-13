@@ -9,4 +9,6 @@ return {
     Color3 = require("datatypes.Color3"),
     BrickColor = require("datatypes.BrickColor"),
     Ray = require("datatypes.Ray"),
+    Region3 = require("datatypes.Region3"),
+    Rect = require("datatypes.Rect"),
 }
