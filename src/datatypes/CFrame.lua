@@ -1,7 +1,4 @@
 local Vector3 = require("datatypes.Vector3")
-local Util = require("util")
-
-local typeof = Util.typeof
 
 local mt = {}
 mt.__type = "CFrame"
