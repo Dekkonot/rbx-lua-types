@@ -2,7 +2,7 @@ local mt = {}
 mt.__type = "Color3"
 
 function mt:__tostring()
-    return string.format("%g, %g, %g", self.R, self.G, self.B)
+    return string.format("(%g, %g, %g)", self.R, self.G, self.B)
 end
 
 function mt:__eq(other)

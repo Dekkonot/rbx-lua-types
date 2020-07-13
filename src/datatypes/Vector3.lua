@@ -2,7 +2,7 @@ local mt = {}
 mt.__type = "Vector3"
 
 function mt:__tostring()
-    return string.format("%g, %g, %g", self.X, self.Y, self.Z)
+    return string.format("<%g, %g, %g>", self.X, self.Y, self.Z)
 end
 
 function mt:__eq(other)
