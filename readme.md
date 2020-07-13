@@ -8,6 +8,9 @@ This project also contains constructors and representations for various Roblox d
 
 The following Roblox data types are included in this project:
 
+- Instance
 - Vector3
 - Vector2
 - CFrame
+- Color3
+- BrickColor
