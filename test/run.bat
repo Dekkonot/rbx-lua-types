@@ -11,5 +11,7 @@ lua5.2 BrickColor.lua
 lua5.2 Ray.lua
 lua5.2 Region3.lua
 lua5.2 Rect.lua
+lua5.2 UDim.lua
+lua5.2 UDim2.lua
 
 echo Finished running tests!

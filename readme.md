@@ -17,3 +17,5 @@ The following Roblox data types are included in this project:
 - Ray
 - Region3
 - Rect
+- UDim
+- UDim2
