@@ -6,7 +6,7 @@ function mt:__tostring()
 end
 
 function mt:__eq(other)
-    return self.R == other.R and self.G == other.G and self.B == self.B
+    return self.R == other.R and self.G == other.G and self.B == other.B
 end
 
 local members = {}
