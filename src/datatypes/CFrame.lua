@@ -21,6 +21,19 @@ end
 
 --- Creates a new `CFrame` out of the arguments.
 local function new(x, y, z, rX, rY, rZ, uX, uY, uZ, lX, lY, lZ)
+    assert(type(x) == "number", "arg #1 to CFrame.new should be a number")
+    assert(type(y) == "number", "arg #2 to CFrame.new should be a number")
+    assert(type(z) == "number", "arg #3 to CFrame.new should be a number")
+    assert(type(rX) == "number", "arg #4 to CFrame.new should be a number")
+    assert(type(rY) == "number", "arg #5 to CFrame.new should be a number")
+    assert(type(rZ) == "number", "arg #6 to CFrame.new should be a number")
+    assert(type(uX) == "number", "arg #7 to CFrame.new should be a number")
+    assert(type(uY) == "number", "arg #8 to CFrame.new should be a number")
+    assert(type(uZ) == "number", "arg #9 to CFrame.new should be a number")
+    assert(type(lX) == "number", "arg #10 to CFrame.new should be a number")
+    assert(type(lY) == "number", "arg #11 to CFrame.new should be a number")
+    assert(type(lZ) == "number", "arg #12 to CFrame.new should be a number")
+
     local self = {}
 
     self.Position = Vector3.new(x, y, z)
