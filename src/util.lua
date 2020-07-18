@@ -5,6 +5,8 @@ local function typeof(thing)
     if type(thing) == "table" then
         if getmetatable(thing) then
             return getmetatable(thing).__type or "table"
+        else
+            return "table"
         end
     else
         return type(thing)
