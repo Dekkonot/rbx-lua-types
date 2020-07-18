@@ -6,6 +6,8 @@ local DOM = require("src")
 local inst0 = DOM.Instance.new("foo")
 local inst1 = DOM.Instance.new("bar")
 
+assert(not pcall(function() return inst0.INDEX_THAT_ISNT_REAL end), "invalid property index didn't throw")
+
 assert(inst0.Ref == 0, "inst0 ref was not 0")
 assert(inst1.Ref == 1, "inst1 ref was not 1")
 

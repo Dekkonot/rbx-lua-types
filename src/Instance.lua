@@ -17,7 +17,14 @@ function mt:__eq(other)
 end
 
 local members = {}
-mt.__index = members
+
+function mt:__index(index)
+    if members[index] then
+        return members[index]
+    else
+        error(string.format("%s is not a valid member of %s", tostring(index), self.ClassName), 2)
+    end
+end
 
 function members:addProperty(propName, propValue)
     assert(type(propName) == "string", "property names must be strings")
