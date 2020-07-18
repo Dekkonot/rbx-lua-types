@@ -8,6 +8,8 @@ local axe1 = DOM.Axes.new(true, true, false)
 local axe2 = DOM.Axes.new(false, true, true)
 local axe3 = DOM.Axes.new(true, false, true)
 
+assert(not pcall(function() return axe0.INDEX_THAT_ISNT_REAL end), "invalid property index didn't throw")
+
 assert(axe0 == axe0, "axe0 was not equal to itself")
 assert(axe0 ~= axe1, "axe0 was equal to axe1")
 assert(axe0 ~= axe2, "axe0 was equal to axe2")

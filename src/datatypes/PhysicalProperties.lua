@@ -12,8 +12,9 @@ function mt:__eq(other)
         self.FrictionWeight == other.FrictionWeight and self.ElasticityWeight == other.ElasticityWeight
 end
 
-local members = {}
-mt.__index = members
+function mt:__index(index)
+    error(string.format("%s is not a valid member of PhysicalProperties", tostring(index)), 2)
+end
 
 --- Creates a new `PhysicalProperties` out of the arguments.
 local function new(density, friction, elasticity, frictionWeight, elasticityWeight)

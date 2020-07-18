@@ -7,6 +7,8 @@ local pps0 = DOM.PhysicalProperties.new(1, 2, 3, 4, 5)
 local pps1 = DOM.PhysicalProperties.new(6, 7, 8, 9, 10)
 local pps2 = DOM.PhysicalProperties.new(1, 2, 3, 4, 5)
 
+assert(not pcall(function() return pps0.INDEX_THAT_ISNT_REAL end), "invalid property index didn't throw")
+
 assert(pps0 == pps0, "pps0 was not equal to itself")
 assert(pps0 ~= pps1, "pps0 was equal to pps1")
 assert(pps0 == pps2, "pps0 was not equal to pps2")

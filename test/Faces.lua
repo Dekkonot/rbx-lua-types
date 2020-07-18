@@ -8,6 +8,8 @@ local fac1 = DOM.Faces.new(true, true, false, false, true, true)
 local fac2 = DOM.Faces.new(false, true, true, false, false, true)
 local fac3 = DOM.Faces.new(true, false, true, false, true, false)
 
+assert(not pcall(function() return fac0.INDEX_THAT_ISNT_REAL end), "invalid property index didn't throw")
+
 assert(fac0 == fac0, "fac0 was not equal to itself")
 assert(fac0 ~= fac1, "fac0 was equal to fac1")
 assert(fac0 ~= fac2, "fac0 was equal to fac2")

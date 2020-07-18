@@ -7,6 +7,8 @@ local nsq0 = DOM.ColorSequence.new({DOM.ColorSequenceKeypoint.new(1, DOM.Color3.
 local nsq1 = DOM.ColorSequence.new({DOM.ColorSequenceKeypoint.new(9, DOM.Color3.new(10, 11, 12)), DOM.ColorSequenceKeypoint.new(13, DOM.Color3.new(14, 15, 16))})
 local nsq2 = DOM.ColorSequence.new({DOM.ColorSequenceKeypoint.new(1, DOM.Color3.new(2, 3, 4)), DOM.ColorSequenceKeypoint.new(5, DOM.Color3.new(6, 7, 8))})
 
+assert(not pcall(function() return nsq0.INDEX_THAT_ISNT_REAL end), "invalid property index didn't throw")
+
 assert(nsq0 == nsq0, "nsq0 was not equal to itself")
 assert(nsq0 ~= nsq1, "nsq0 was equal to nsq1")
 assert(nsq0 == nsq2, "nsq0 was not equal to nsq2")

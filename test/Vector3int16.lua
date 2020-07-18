@@ -7,6 +7,8 @@ local vec0 = DOM.Vector3int16.new(1, 2, 3)
 local vec1 = DOM.Vector3int16.new(4, 5, 6)
 local vec2 = DOM.Vector3int16.new(1, 2, 3)
 
+assert(not pcall(function() return vec0.INDEX_THAT_ISNT_REAL end), "invalid property index didn't throw")
+
 assert(not pcall(DOM.Vector3int16.new, 1.5, 2, 3), "Vector3int16.new's first argument was allowed to be a fraction")
 assert(not pcall(DOM.Vector3int16.new, 1, 2.5, 3), "Vector3int16.new's second argument was allowed to be a fraction")
 assert(not pcall(DOM.Vector3int16.new, 1, 2, 3.5), "Vector3int16.new's third argument was allowed to be a fraction")

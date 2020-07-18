@@ -9,8 +9,9 @@ function mt:__eq(other)
     return self.Time == other.Time and self.Value == other.Value and self.Envelope == other.Envelope
 end
 
-local members = {}
-mt.__index = members
+function mt:__index(index)
+    error(string.format("%s is not a valid member of NumberSequenceKeypoint", tostring(index)), 2)
+end
 
 --- Creates a new `NumberSequenceKeypoint` out of the arguments.
 local function new(time, value, envelope)

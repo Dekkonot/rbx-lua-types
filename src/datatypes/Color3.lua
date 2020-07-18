@@ -9,8 +9,9 @@ function mt:__eq(other)
     return self.R == other.R and self.G == other.G and self.B == other.B
 end
 
-local members = {}
-mt.__index = members
+function mt:__index(index)
+    error(string.format("%s is not a valid member of Color3", tostring(index)), 2)
+end
 
 --- Creates a new `Color3` out of the arguments. Takes fractions as its arguments.
 local function new(r, g, b)

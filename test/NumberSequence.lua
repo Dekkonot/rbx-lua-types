@@ -7,6 +7,8 @@ local nsq0 = DOM.NumberSequence.new({DOM.NumberSequenceKeypoint.new(1, 2, 3), DO
 local nsq1 = DOM.NumberSequence.new({DOM.NumberSequenceKeypoint.new(7, 8, 9), DOM.NumberSequenceKeypoint.new(10, 11, 12)})
 local nsq2 = DOM.NumberSequence.new({DOM.NumberSequenceKeypoint.new(1, 2, 3), DOM.NumberSequenceKeypoint.new(4, 5, 6)})
 
+assert(not pcall(function() return nsq0.INDEX_THAT_ISNT_REAL end), "invalid property index didn't throw")
+
 assert(nsq0 == nsq0, "nsq0 was not equal to itself")
 assert(nsq0 ~= nsq1, "nsq0 was equal to nsq1")
 assert(nsq0 == nsq2, "nsq0 was not equal to nsq2")

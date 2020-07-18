@@ -15,8 +15,9 @@ function mt:__eq(other)
         and self.UpVector == self.UpVector and self.LookVector == other.LookVector
 end
 
-local members = {}
-mt.__index = members
+function mt:__index(index)
+    error(string.format("%s is not a valid member of CFrame", tostring(index)), 2)
+end
 
 --- Creates a new `CFrame` out of the arguments.
 local function new(x, y, z, rX, rY, rZ, uX, uY, uZ, lX, lY, lZ)

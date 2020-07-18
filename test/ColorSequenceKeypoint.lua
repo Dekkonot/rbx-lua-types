@@ -7,6 +7,8 @@ local csk0 = DOM.ColorSequenceKeypoint.new(1, DOM.Color3.new(2, 3, 4))
 local csk1 = DOM.ColorSequenceKeypoint.new(5, DOM.Color3.new(6, 7, 8))
 local csk2 = DOM.ColorSequenceKeypoint.new(1, DOM.Color3.new(2, 3, 4))
 
+assert(not pcall(function() return csk0.INDEX_THAT_ISNT_REAL end), "invalid property index didn't throw")
+
 assert(csk0 == csk0, "csk0 was not equal to itself")
 assert(csk0 ~= csk1, "csk0 was equal to csk1")
 assert(csk0 == csk2, "csk0 was not equal to csk2")

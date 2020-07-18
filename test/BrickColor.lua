@@ -7,6 +7,8 @@ local brk0 = DOM.BrickColor.new(194)
 local brk1 = DOM.BrickColor.new(26)
 local brk2 = DOM.BrickColor.new(1234567890)
 
+assert(not pcall(function() return brk0.INDEX_THAT_ISNT_REAL end), "invalid property index didn't throw")
+
 assert(brk0 == brk0, "brk0 was not equal to itself")
 assert(brk0 ~= brk1, "brk0 was equal to brk1")
 assert(brk0 == brk2, "brk0 was not equal to brk2")

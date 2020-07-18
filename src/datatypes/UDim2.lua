@@ -11,8 +11,9 @@ function mt:__eq(other)
     return self.X == other.X and self.Y == other.Y
 end
 
-local members = {}
-mt.__index = members
+function mt:__index(index)
+    error(string.format("%s is not a valid member of UDim2", tostring(index)), 2)
+end
 
 --- Creates a new `UDim2` out of the arguments.
 local function new(xScale, xOffset, yScale, yOffset)

@@ -13,8 +13,9 @@ function mt:__eq(other)
     return self.Min == other.Min and self.Max == other.Max
 end
 
-local members = {}
-mt.__index = members
+function mt:__index(index)
+    error(string.format("%s is not a valid member of Rect", tostring(index)), 2)
+end
 
 --- Creates a new `Rect` out of the arguments.
 local function new(min, max)

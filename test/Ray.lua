@@ -7,6 +7,8 @@ local ray0 = DOM.Ray.new(DOM.Vector3.new(1, 2, 3), DOM.Vector3.new(4, 5, 6))
 local ray1 = DOM.Ray.new(DOM.Vector3.new(7, 8, 9), DOM.Vector3.new(10, 11, 12))
 local ray2 = DOM.Ray.new(DOM.Vector3.new(1, 2, 3), DOM.Vector3.new(4, 5, 6))
 
+assert(not pcall(function() return ray0.INDEX_THAT_ISNT_REAL end), "invalid property index didn't throw")
+
 assert(ray0 == ray0, "ray0 was not equal to itself")
 assert(ray0 ~= ray1, "ray0 was equal to ray1")
 assert(ray0 == ray2, "ray0 was not equal to ray2")

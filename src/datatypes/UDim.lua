@@ -9,8 +9,9 @@ function mt:__eq(other)
     return self.Scale == other.Scale and self.Offset == other.Offset
 end
 
-local members = {}
-mt.__index = members
+function mt:__index(index)
+    error(string.format("%s is not a valid member of UDim", tostring(index)), 2)
+end
 
 --- Creates a new `UDim` out of the arguments.
 local function new(scale, offset)

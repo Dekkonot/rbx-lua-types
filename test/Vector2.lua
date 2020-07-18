@@ -7,6 +7,8 @@ local vec0 = DOM.Vector2.new(1, 2)
 local vec1 = DOM.Vector2.new(3, 4)
 local vec2 = DOM.Vector2.new(1, 2)
 
+assert(not pcall(function() return vec0.INDEX_THAT_ISNT_REAL end), "invalid property index didn't throw")
+
 assert(vec0 == vec0, "vec0 was not equal to itself")
 assert(vec0 ~= vec1, "vec0 was equal to vec1")
 assert(vec0 == vec2, "vec0 was not equal to vec2")

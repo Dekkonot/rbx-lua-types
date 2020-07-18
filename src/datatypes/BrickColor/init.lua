@@ -11,8 +11,9 @@ function mt:__eq(other)
     return self.Number == other.Number
 end
 
-local members = {}
-mt.__index = members
+function mt:__index(index)
+    error(string.format("%s is not a valid member of BrickColor", tostring(index)), 2)
+end
 
 --- Creates a new `BrickColor`.
 local function new(number)

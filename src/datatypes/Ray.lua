@@ -13,8 +13,9 @@ function mt:__eq(other)
     return self.Origin == other.Origin and self.Direction == other.Direction
 end
 
-local members = {}
-mt.__index = members
+function mt:__index(index)
+    error(string.format("%s is not a valid member of Ray", tostring(index)), 2)
+end
 
 --- Creates a new `Ray` out of the arguments.
 local function new(origin, direction)

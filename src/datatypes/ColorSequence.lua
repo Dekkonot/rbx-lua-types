@@ -23,8 +23,9 @@ function mt:__eq(other)
     return true
 end
 
-local members = {}
-mt.__index = members
+function mt:__index(index)
+    error(string.format("%s is not a valid member of ColorSequence", tostring(index)), 2)
+end
 
 --- Creates a new `ColorSequence` out of the arguments.
 --- `keypoints` is not stored in the ColorSequence, but the keypoints *are*.

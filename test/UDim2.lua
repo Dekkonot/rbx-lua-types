@@ -7,6 +7,8 @@ local udim0 = DOM.UDim2.new(1, 2, 3, 4)
 local udim1 = DOM.UDim2.new(4, 3, 2, 1)
 local udim2 = DOM.UDim2.new(1, 2, 3, 4)
 
+assert(not pcall(function() return udim0.INDEX_THAT_ISNT_REAL end), "invalid property index didn't throw")
+
 assert(udim0 == udim0, "udim0 was not equal to itself")
 assert(udim0 ~= udim1, "udim0 was equal to udim1")
 assert(udim0 == udim2, "udim0 was not equal to udim2")

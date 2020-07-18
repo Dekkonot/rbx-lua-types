@@ -13,8 +13,9 @@ function mt:__eq(other)
     return self.Time == other.Time and self.Value == other.Value
 end
 
-local members = {}
-mt.__index = members
+function mt:__index(index)
+    error(string.format("%s is not a valid member of ColorSequenceKeypoint", tostring(index)), 2)
+end
 
 --- Creates a new `ColorSequenceKeypoint` out of the arguments.
 local function new(time, value)

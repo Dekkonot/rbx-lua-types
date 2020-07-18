@@ -7,6 +7,8 @@ local col0 = DOM.Color3.new(1, 2, 3)
 local col1 = DOM.Color3.new(4, 5, 6)
 local col2 = DOM.Color3.fromRGB(255*1, 255*2, 255*3)
 
+assert(not pcall(function() return col0.INDEX_THAT_ISNT_REAL end), "invalid property index didn't throw")
+
 assert(col0 == col0, "col0 was not equal to itself")
 assert(col0 ~= col1, "col0 was equal to col1")
 assert(col0 == col2, "col0 was not equal to col2")

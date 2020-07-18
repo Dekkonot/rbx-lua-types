@@ -7,6 +7,8 @@ local rect0 = DOM.Rect.new(DOM.Vector2.new(1, 2), DOM.Vector2.new(3, 4))
 local rect1 = DOM.Rect.new(DOM.Vector2.new(4, 3), DOM.Vector2.new(2, 1))
 local rect2 = DOM.Rect.new(DOM.Vector2.new(1, 2), DOM.Vector2.new(3, 4))
 
+assert(not pcall(function() return rect0.INDEX_THAT_ISNT_REAL end), "invalid property index didn't throw")
+
 assert(rect0 == rect0, "rect0 was not equal to itself")
 assert(rect0 ~= rect1, "rect0 was equal to rect1")
 assert(rect0 == rect2, "rect0 was not equal to rect2")

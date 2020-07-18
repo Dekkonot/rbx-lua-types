@@ -7,6 +7,8 @@ local range0 = DOM.NumberRange.new(1, 2)
 local range1 = DOM.NumberRange.new(3, 4)
 local range2 = DOM.NumberRange.new(1, 2)
 
+assert(not pcall(function() return range0.INDEX_THAT_ISNT_REAL end), "invalid property index didn't throw")
+
 assert(range0 == range0, "range0 was not equal to itself")
 assert(range0 ~= range1, "range0 was equal to range1")
 assert(range0 == range2, "range0 was not equal to range2")

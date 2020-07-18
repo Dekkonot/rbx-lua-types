@@ -7,6 +7,8 @@ local cf0 = DOM.CFrame.new(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
 local cf1 = DOM.CFrame.new(12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1)
 local cf2 = DOM.CFrame.new(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
 
+assert(not pcall(function() return cf0.INDEX_THAT_ISNT_REAL end), "invalid property index didn't throw")
+
 assert(cf0 == cf0, "cf0 was not equal to itself")
 assert(cf0 ~= cf1, "cf0 was equal to cf1")
 assert(cf0 == cf2, "cf0 was not equal to cf2")

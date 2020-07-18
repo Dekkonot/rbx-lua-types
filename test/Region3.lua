@@ -7,6 +7,8 @@ local reg0 = DOM.Region3.new(DOM.Vector3.new(1, 2, 3), DOM.Vector3.new(4, 5, 6))
 local reg1 = DOM.Region3.new(DOM.Vector3.new(7, 8, 9), DOM.Vector3.new(10, 11, 12))
 local reg2 = DOM.Region3.new(DOM.Vector3.new(1, 2, 3), DOM.Vector3.new(4, 5, 6))
 
+assert(not pcall(function() return reg0.INDEX_THAT_ISNT_REAL end), "invalid property index didn't throw")
+
 assert(reg0 == reg0, "reg0 was not equal to itself")
 assert(reg0 ~= reg1, "reg0 was equal to reg1")
 assert(reg0 == reg2, "reg0 was not equal to reg2")

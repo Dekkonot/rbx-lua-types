@@ -9,8 +9,9 @@ function mt:__eq(other)
     return self.X == other.X and self.Y == other.Y and self.Z == other.Z
 end
 
-local members = {}
-mt.__index = members
+function mt:__index(index)
+    error(string.format("%s is not a valid member of Axes", tostring(index)), 2)
+end
 
 --- Creates a new `Axes` out of the arguments.
 local function new(x, y, z)

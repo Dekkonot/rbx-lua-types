@@ -13,8 +13,9 @@ function mt:__eq(other)
         self.Right == other.Right and self.Back == other.Back and self.Front == other.Front
 end
 
-local members = {}
-mt.__index = members
+function mt:__index(index)
+    error(string.format("%s is not a valid member of Faces", tostring(index)), 2)
+end
 
 --- Creates a new `Faces` out of the arguments.
 local function new(top, bottom, left, right, back, front)
