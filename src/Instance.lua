@@ -93,7 +93,7 @@ end
 local nullClass = setmetatable({
     Parent = nil,
     Properties = setmetatable({}, READ_ONLY_MT),
-    Children = setmetatable({}, WEAK_VALUE_MT),
+    Children = {},
     Ref = -1,
     ClassName = "NULL",
 }, mt)
@@ -107,7 +107,7 @@ local function new(class, ref)
 
     self.Parent = nullClass
     self.Properties = setmetatable({}, READ_ONLY_MT)
-    self.Children = setmetatable({}, WEAK_VALUE_MT)
+    self.Children = {}
     self.Ref = ref or refNumber
     self.ClassName = class -- It's not meaningful to have ClassName in `Properties` but it's still helpful to keep track of.
 
