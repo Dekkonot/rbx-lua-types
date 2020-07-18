@@ -20,3 +20,7 @@ The following Roblox data types are included in this project:
 - UDim
 - UDim2
 - NumberRange
+- NumberSequenceKeypoint
+- NumberSequence
+- ColorSequenceKeypoint
+- ColorSequence

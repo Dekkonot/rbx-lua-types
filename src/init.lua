@@ -14,4 +14,8 @@ return {
     UDim = require("datatypes.UDim"),
     UDim2 = require("datatypes.UDim2"),
     NumberRange = require("datatypes.NumberRange"),
+    NumberSequenceKeypoint = require("datatypes.NumberSequenceKeypoint"),
+    NumberSequence = require("datatypes.NumberSequence"),
+    ColorSequenceKeypoint = require("datatypes.ColorSequenceKeypoint"),
+    ColorSequence = require("datatypes.ColorSequence"),
 }

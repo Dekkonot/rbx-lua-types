@@ -14,5 +14,9 @@ lua5.2 Rect.lua
 lua5.2 UDim.lua
 lua5.2 UDim2.lua
 lua5.2 NumberRange.lua
+lua5.2 NumberSequenceKeypoint.lua
+lua5.2 NumberSequence.lua
+lua5.2 ColorSequenceKeypoint.lua
+lua5.2 ColorSequence.lua
 
 echo Finished running tests!
