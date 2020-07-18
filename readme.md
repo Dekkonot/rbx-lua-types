@@ -24,3 +24,7 @@ The following Roblox data types are included in this project:
 - NumberSequence
 - ColorSequenceKeypoint
 - ColorSequence
+- Faces
+- Axes
+- Vector3int16
+- PhysicalProperties

@@ -18,4 +18,8 @@ return {
     NumberSequence = require("datatypes.NumberSequence"),
     ColorSequenceKeypoint = require("datatypes.ColorSequenceKeypoint"),
     ColorSequence = require("datatypes.ColorSequence"),
+    Faces = require("datatypes.Faces"),
+    Axes = require("datatypes.Axes"),
+    Vector3int16 = require("datatypes.Vector3int16"),
+    PhysicalProperties = require("datatypes.PhysicalProperties"),
 }

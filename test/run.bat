@@ -18,5 +18,9 @@ lua5.2 NumberSequenceKeypoint.lua
 lua5.2 NumberSequence.lua
 lua5.2 ColorSequenceKeypoint.lua
 lua5.2 ColorSequence.lua
+lua5.2 Faces.lua
+lua5.2 Axes.lua
+lua5.2 Vector3int16.lua
+lua5.2 PhysicalProperties.lua
 
 echo Finished running tests!
