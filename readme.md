@@ -1,13 +1,14 @@
 # rbx-lua-types
 
-This project is meant to provide a consistent representation of Roblox's data types for things like a DOM... in pure Lua. It is **not** meant to implement the entirety of Roblox's API. That task is monumental and well outside scope.
+This library is meant to provide a consistent representation of Roblox's data types for things like a DOM... in pure Lua. It is **not** meant to implement the entirety of Roblox's API. That task is monumental and well outside scope.
 
-This project contains an 'Instance' type that can be used as a representation for Roblox classes. No validation is done on members pushed or popped onto these classes, including the ClassName.
+Each datatype has one or more constructor that returns an instance of the type in question. The constructors used attempt to mimic one or more of Roblox's constructors, though given that Enums have no representation (yet) in this library, this isn't entirely possible.
 
-This project also contains constructors and representations for various Roblox data types. These are not meant to emulate Roblox's implementations of the data types and are, again, only for the purposes of representation.
+## Contents
 
-The following Roblox data types are included in this project:
+The [main module](src) returns a table with the following fields in it:
 
+- typeof
 - Instance
 - Vector3
 - Vector2
@@ -28,3 +29,11 @@ The following Roblox data types are included in this project:
 - Axes
 - Vector3int16
 - PhysicalProperties
+
+With the exception of `typeof`, these fields represent modules for constructing Roblox datatypes. If a datatype is not present in the list above, it is not implemented yet.
+
+The field `typeof` is a function that acts identically to the Roblox function of the same name and provides a more specific variant of `type` that takes the datatypes in this module into account.
+
+### Documentation
+
+Documentation for this library is not present yet, but the code is not very complex. You should be able to understand it from reading the actual modules or the [tests](test).
